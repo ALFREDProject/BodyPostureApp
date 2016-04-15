@@ -30,7 +30,7 @@ public class HelpToPostureAction implements ICadeCommand {
     public void performAction(String s, Map<String, String> map) {
 
         ImageView howToImage = (ImageView) main.findViewById(R.id.image_howto);
-        String posture = map.get("selected_posture");
+        String posture = map.get("selected_bodyposture");
 
         if(posture.equals(STAND)) {
             howToImage.setImageResource(R.drawable.howto_stand);
