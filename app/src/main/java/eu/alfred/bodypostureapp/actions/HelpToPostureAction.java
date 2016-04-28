@@ -14,9 +14,6 @@ import eu.alfred.bodypostureapp.R;
  */
 public class HelpToPostureAction implements ICadeCommand {
 
-    final static String LIE = "lie";
-    final static String SIT = "sit";
-    final static String STAND = "stand";
 
     MainActivity main;
     Cade cade;
@@ -32,12 +29,22 @@ public class HelpToPostureAction implements ICadeCommand {
         ImageView howToImage = (ImageView) main.findViewById(R.id.image_howto);
         String posture = map.get("selected_bodyposture");
 
-        if(posture.equals(STAND)) {
-            howToImage.setImageResource(R.drawable.howto_stand);
-        } else if(posture.equals(SIT)) {
-            howToImage.setImageResource(R.drawable.howto_sit);
-        } else {
-            howToImage.setImageResource(R.drawable.howto_lie);
+        switch (posture) {
+            case("sit"):
+            case("assis"):
+            case("zit"):
+                howToImage.setImageResource(R.drawable.howto_stand);
+                break;
+            case("stand"):
+            case("debout"):
+            case("sta"):
+                howToImage.setImageResource(R.drawable.howto_sit);
+                break;
+            case("lie"):
+            case("allonge"):
+            case("lig"):
+                howToImage.setImageResource(R.drawable.howto_lie);
+                break;
         }
 
         cade.sendActionResult(true);
