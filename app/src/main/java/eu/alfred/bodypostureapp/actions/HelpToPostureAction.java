@@ -33,12 +33,12 @@ public class HelpToPostureAction implements ICadeCommand {
             case("sit"):
             case("assis"):
             case("zit"):
-                howToImage.setImageResource(R.drawable.howto_stand);
+                howToImage.setImageResource(R.drawable.howto_sit);
                 break;
             case("stand"):
             case("debout"):
             case("sta"):
-                howToImage.setImageResource(R.drawable.howto_sit);
+                howToImage.setImageResource(R.drawable.howto_stand);
                 break;
             case("lie"):
             case("allonge"):
